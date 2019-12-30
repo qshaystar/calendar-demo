@@ -1,0 +1,142 @@
+#calender {
+	margin: 0 auto;
+	width: 90%;
+}
+
+#header {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+.day, .date-block {
+	float: left;
+	width: calc(100% / 7);
+}
+
+#dates {
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.date-block {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 4px;
+	height: 15vh;  
+	 /*用vh才會有高度，因為以視窗為基準，若用％高度會以內容為基準，無法撐開*/
+	overflow: auto;
+}
+
+.date-block.empty {
+	background-color: #eee;
+}
+
+.event {
+	margin-bottom: 2px;
+	border-radius: 12px;
+	padding: 0 5px;
+	background: #398fe8;
+	color: white;    
+   	font-size: 12px;
+}
+
+.event .title {
+	float: left;
+}
+
+.event .from {
+	float: right;
+}
+
+
+
+
+/*info-panel*/
+
+#info-panel {
+	position: fixed;
+	display: none;
+    background: white;
+    width: 280px;
+}
+
+#info-panel.open {
+	display: block;
+}
+
+
+#info-panel label {
+	font-size: .8em;
+	color: #aaa;
+}
+
+#info-panel .close {
+	position: relative;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+#info-panel .title, #info-panel .time-picker {
+	border-bottom: 1px solid #ccc;
+}
+
+#info-panel .title, #info-panel .time-picker, #info-panel .description {
+	padding: 10px;
+}
+
+.error-msg {
+	display: none;
+}
+
+.error-msg.open {
+	display: block;
+}
+
+.selected-date {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+#description {
+	width: 100%;
+}
+
+#info-panel button {
+	display: none;
+	padding: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#info-panel.new button.create, #info-panel.new button.cancel {
+	float: left;
+	display: block;
+	width: 50%;
+}
+
+#info-panel.update button.update, #info-panel.update button.cancel, #info-panel.update button.delete {
+	float: left;
+	display: block;
+	width: 50%;
+}
+
+
+#info-panel button.create, #info-panel button.update {
+	background-color: #6abf6a;
+}
+
+#info-panel.update button.delete {
+	width: 100%;
+	background-color: #e26767;
+}
+
+#info-panel button.cancel {
+	background-color: #a2a2a2;
+}
+
+
+
